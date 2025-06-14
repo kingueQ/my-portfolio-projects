@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de Solicitud</title>
+    <link rel="stylesheet" href="css/seguimiento_resolutores.css">
+</head>
+
+<body>
+    <nav>
+        <button onclick="window.location.href='inicio.html'">← Volver a Inicio</button>
+    </nav>
+
+    <div class="main-content">
+        <div class="details-container">
+            <h2>Detalles de la Solicitud</h2>
+            <p><strong>Clave de Rastreo:</strong> <span id="clave_rastreo"></span></p>
+            <p><strong>Usuario:</strong> <span id="usuario"></span></p>
+            <p><strong>Resolutor:</strong> <span id="resolutor"></span></p>
+            <p><strong>Fecha de creación:</strong> <span id="fecha_creacion"></span></p>
+            <p><strong>Tipo de equipo:</strong> <span id="tipo_equipo"></span></p>
+            <p><strong>Estado:</strong> <span id="estado"></span></p>
+            <h3>Historial</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descripción</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody id="historial"></tbody>
+            </table>
+            <div class="buttons-container">
+                <button id="btnCambiarEstado" onclick="cambiarEstado()">Cambiar Estado</button>
+                <button id="btnCancelar" onclick="cancelarSolicitud()">Cancelar Solicitud</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalServiceTag" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span onclick="cerrarModalServiceTag()" class="close">&times;</span>
+            <h2>Validar Service Tag</h2>
+            <input type="text" id="inputServiceTagModal" placeholder="Ingresa el Service Tag" />
+            <button onclick="validarYEnviarServiceTag()">Validar</button>
+            <button onclick="cerrarModalServiceTag()">Cancelar</button>
+        </div>
+    </div>
+
+    <div id="modalDatosEquipo" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span onclick="cerrarModalDatosEquipo()" class="close">&times;</span>
+            <h2>Datos del equipo</h2>
+
+            <div>
+                <label><strong>Folio:</strong></label>
+                <p id="campoFolio">--</p>
+            </div>
+            <div>
+                <label><strong>Número de Empleado:</strong></label>
+                <p id="campoNumeroEmpleado">--</p>
+            </div>
+            <div>
+                <label><strong>Nombre:</strong></label>
+                <p id="campoNombre">--</p>
+            </div>
+            <div>
+                <label><strong>Puesto:</strong></label>
+                <p id="campoPuesto">--</p>
+            </div>
+            <div>
+                <label><strong>Nombre de Equipo:</strong></label>
+                <p id="campoNombreEquipo">--</p>
+            </div>
+            <div>
+                <label><strong>Sucursal:</strong></label>
+                <p id="campoSucursal">--</p>
+            </div>
+            <div>
+                <label><strong>Correo:</strong></label>
+                <p id="campoCorreo">--</p>  
+            </div>
+            <button id="btnAceptar" onclick="confirmarCambioFinal()">Aceptar</button>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/seguimiento_resolutores.js" defer></script>
+</body>
+
+</html>
