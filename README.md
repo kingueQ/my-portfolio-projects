@@ -21,7 +21,7 @@ These projects reflect my academic work, internship experience, and personal lea
 
 | Project | Description | Tech Stack | Link |
 |--------|-------------|------------|------|
-| **Asset Management System** | Web app to register, track, and manage company assets | Node.js, MySQL, React | [View Project](./asset-management-system/) |
+| **Asset Management System** | Web app to register, track, and manage company assets | Node.js, MySQL, React | [View Project](./Asset-Management-System/) |
 
 > 📌 More projects will be added over time as I continue to learn and grow.
 
